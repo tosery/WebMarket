@@ -13,12 +13,11 @@
 	<h3>현재 로케일의 국가, 날짜, 통화</h3>
 	<%
 		Locale locale = request.getLocale();
-		String displayCountry = locale.getDisplayCountry();
 		Date currentDate = new Date();
 		DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL,locale);
 		NumberFormat numberFormat = NumberFormat.getNumberInstance(locale);
 	%>
-	<p>국가: <%=locale.getDisplayCountry() %>
+	<p>국가: <%=locale.getDisplayCountry()%>
 	<p>날짜: <%=dateFormat.format(currentDate)%>
 	<p>숫자(12345.67): <%=numberFormat.format(12345.67) %> 
 	
